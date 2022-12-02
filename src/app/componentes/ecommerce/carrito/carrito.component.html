@@ -1,0 +1,133 @@
+<!-- SECTION -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6 order-details">
+                <div class="section-title text-center">
+                    <h3 class="title">Su Orden (NUMERO DE FACTURA)</h3>
+                </div>
+                <div class="order-summary">
+                    <div class="order-col">
+                        <div><strong>PRODUCTO</strong></div>
+                        <div><strong>TOTAL</strong></div>
+                        <div><strong></strong></div>
+                    </div>
+                    <div class="order-products">
+
+                            <div class="order-col" *ngFor="let item of items">
+                                <div>{{item.cantidad}} x {{item.producto.descripcion}}</div>
+                                <div>{{item.importe}}</div>
+                                <div><a class = "fa fa-trash fa-2x" (click)="eliminarProducto(item.producto.id)"></a></div>
+                            </div>
+
+                    </div>
+                    <div class="order-col">
+                        <div>Envio</div>
+                        <div><strong>Gratis</strong></div>
+                        <div><strong></strong></div>
+                    </div>
+                    <div class="order-col">
+                        <div><strong>TOTAL</strong></div>
+                        <div><strong class="order-total">S/{{total}}</strong></div>
+                        <div><strong></strong></div>
+                    </div>
+                </div>
+                <div class="payment-method">
+                    <div class="input-radio">
+                        <input type="radio" name="payment" id="payment-1">
+                        <label for="payment-1">
+                            <span></span>
+                            Transferencia bancaria directa
+                        </label>
+                        <div class="caption">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" name="payment" id="payment-2">
+                        <label for="payment-2">
+                            <span></span>
+                            Cheque Pago
+                        </label>
+                        <div class="caption">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" name="payment" id="payment-3">
+                        <label for="payment-3">
+                            <span></span>
+                            Sistema Paypal
+                        </label>
+                        <div class="caption">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-checkbox">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">
+                        <span></span>
+                        He leído y acepto los <a href="#">términos y condiciones</a>
+                    </label>
+                </div>
+                <!-- 
+                @{
+                    if ((Context.Session.GetString("_UserNormal") == null) || (Context.Session.GetString("_UserNormal") == ""))
+                    {
+
+                        <a asp-action="Index" asp-controller="Login" class="primary-btn order-submit">Ordenar ahora</a>
+                    }
+                    else
+                    {
+                        -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="text-align:center">
+                                        <h2 class="modal-title" id="exampleModalLabel">¡Su compra ha sido exitosa!</h2>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>Le avisaremos cuando su pedido este en camino.</h4>
+                                        <h5>Recuerda que para recibir su pedido deberá presentar su DNI</h5>
+                                        <br />
+                                        <h5>Será redirigido en 5 segundos ...</h5>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MODAL -->
+                        <form>
+                            <input asp-for="Id_Venta" class="form-control" type="hidden" />
+                            <input asp-for="NumFactura" class="form-control" value="@ViewBag.numerofactura" type="hidden" />
+                            <input asp-for="Total_Fac" class="form-control" value="@ViewBag.total" type="hidden" />
+                            <input asp-for="IdUsuario" class="form-control" type="hidden" />
+                            <div class="form-group">
+                                <input type="submit" value="Ordenar ahora" class="primary-btn order-submit" style="width:100%" data-toggle="modal" data-target="#exampleModal" />
+                                <button (click)="guardarVenta()" class="primary-btn order-submit">Ordenar ahora</button>
+                            </div>
+                        </form>
+                        <!--
+                        <a href="#" class="primary-btn order-submit">Ordenar ahora</a>-->
+
+
+            </div>
+            <!-- /Order Details -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->

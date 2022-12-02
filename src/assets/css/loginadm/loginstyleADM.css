@@ -1,0 +1,100 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../../imagenes/login/bg.jpg");
+}
+.contenedor-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cuerpo_formulario {
+    width: 400px;
+    min-width: 300px;
+    border-radius: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: solid 2px #ffffff;
+    margin: 10px;
+    padding: 15px;
+    color: white;
+    background-color: #00000052;
+}
+
+.cuerpo_formulario img{
+    width: 150px;
+    display: block;
+    margin: 20px auto;
+}
+
+.p-text{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.cuerpo_formulario input {
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 75%;
+    padding-left: 10px;
+    color: #ffffff;
+    border: solid 2px #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.cuerpo_formulario input[type="password"]{
+
+    margin-top: 20px;
+}
+::placeholder{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, .596);
+}
+
+.cuerpo_formulario input:hover{
+    transition: .5s;
+    border: 2px solid;
+    color: #2498db;
+}
+
+.cuerpo_formulario button {
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    height: 40px;
+    width: 78%;
+    background: #2498db;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid #2980b9;
+    transition: all .5s ease;
+}
+
+    .cuerpo_formulario button:hover {
+        color: #d5dbdd;
+        border: 2px solid #2b7eaf;
+        background: linear-gradient(#2498db,#2b7eaf);
+    }

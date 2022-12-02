@@ -94,9 +94,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/sweetalert2/src/sweetalert2.scss"
+              
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/template/js/Layout/js/bootstrap.min.js",
+              "src/assets/js/template/js/Layout/js/jquery.min.js",
+              "src/assets/js/template/js/Layout/js/jquery.zoom.min.js",
+              "src/assets/js/template/js/Layout/js/main.js",
+              "src/assets/js/template/js/Layout/js/nouislider.min.js",
+              "src/assets/js/template/js/Layout/js/slick.min.js",
+              "src/assets/js/template/js/site.js"
+            ]
           }
         }
       }

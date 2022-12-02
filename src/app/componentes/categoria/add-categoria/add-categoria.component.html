@@ -1,0 +1,16 @@
+<div class="container col-md-6">
+    <div class="card-header">
+        <h3> Agregar Categoria</h3>
+    </div>
+    <div class="card-body">
+        <form action="">
+            <div class="form-group">
+                <label for="">Descripción:</label>
+                <input type="text" [(ngModel)]="modelCategoria.desCategoria" name="desCategoria"  class="form-control">
+            </div>
+            <button (click)="guardar(modelCategoria)" class="btn btn-danger">Guardar</button> &nbsp;  
+            <button (click)="cancelar()" class="btn btn-secondary">Cancelar</button>
+        </form>
+
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="container col-md-6">
+    <div class="card-header">
+        <h3> Agregar Productos</h3>
+    </div>
+    <div class="card-body">
+        <form action="">
+            <div class="form-group">
+                <label for="">Codigo:</label>
+                <input type="text" [(ngModel)]="modelProducto.codigo" name="codigo"  class="form-control">
+            </div>
+ 
+            <div class="form-group">
+                <label for="">Descripción:</label>
+                <input type="text" [(ngModel)]="modelProducto.descripcion" name="descripcion"  class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Precio:</label>
+                <input type="text" [(ngModel)]="modelProducto.precio" name="stock" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Stock:</label>
+                <input type="text" [(ngModel)]="modelProducto.stock" name="precio" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Garantia:</label>
+                <input type="text" [(ngModel)]="modelProducto.garantia" name="garantia" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Imagen:</label>
+                <input type="text" [(ngModel)]="modelProducto.imagen" name="imagen" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Descuento:</label>
+                <input type="text" [(ngModel)]="modelProducto.descuento" name="descuento" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Categoria:</label> 
+                <div>
+                <select name="categoria" [(ngModel)]="modelProducto.categoria"  class="form-control" >
+                    <option value="" disabled>Elige una categoría</option> 
+                    <option  *ngFor="let objeto of categorias" [ngValue]="objeto" >{{objeto.desCategoria}} </option>
+                </select>
+                </div>
+            </div>
+            <button (click)="guardar(modelProducto)" class="btn btn-danger">Guardar</button> &nbsp;  
+            <button (click)="cancelar()" class="btn btn-secondary">Cancelar</button>
+        </form>
+
+    </div>
+</div>

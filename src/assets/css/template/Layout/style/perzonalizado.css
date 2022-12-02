@@ -1,0 +1,14 @@
+﻿.showpromo {
+    float: left;
+    position: relative;
+    width: 360px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 35px;
+}
+.txbox {
+    width: 60px;
+}
+.alert-txt {
+    color: red;
+}

@@ -1,0 +1,56 @@
+<nav class="navbar navbar-inverse" style="margin-bottom:0px" role="navigation">
+  <!-- El logotipo y el icono que despliega el menú se agrupan
+       para mostrarlos mejor en los dispositivos móviles -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse"
+            data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Desplegar navegación</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" >Productos</a>
+    <a class="navbar-brand" (click)="irCategoria()">Categorias</a>
+  </div>
+
+</nav>
+<br>
+
+<div class="card-header">
+    <h3> Listado de Productos</h3>
+  </div>
+  <br>
+  <button  (click)="nuevo()"  class="btn btn-warning"> Agregar</button>
+  <br><br>
+  <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Codigo</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Stock</th> 
+        <th>Garantia</th>
+        <th>Descuento</th>
+        <th>Categoria</th>
+        <th>Acciones </th> 
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productos">
+        <td>{{producto.id}}</td>
+        <td>{{producto.codigo}}</td>
+        <td>{{producto.descripcion}}</td>
+        <td>{{producto.precio}}</td>
+        <td>{{producto.stock}}</td> 
+        <td>{{producto.garantia}}</td>
+        <td>{{producto.descuento}}</td>
+        <td>{{producto.categoria.desCategoria}}</td>
+        <td>  
+          <button  (click)="editar(producto)" class="btn btn-primary"> Editar</button>&nbsp; 
+          <button (click)="eliminar(producto)" class="btn btn-danger"> Delete</button>  
+  
+        </td> 
+      </tr>
+      </tbody>
+    </table>
